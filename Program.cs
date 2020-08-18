@@ -1,40 +1,45 @@
 ﻿using System;
+using System.Collections.Generic;
 
-    namespace mainSys
+namespace mainSys
     {
-        public class calendar
+        public class Calendar
         {
+            
             int eventCount;
-            public static void addEvent()
+            public IList<CalendarEvent> Events = new List<CalendarEvent>();
+            public void AddEvent()
             {
-                
+                var newEvent = new CalendarEvent();
                 Console.WriteLine("Enter event name...");
-                calendarEvent.eventName =  Console.ReadLine();
+                newEvent.eventName =  Console.ReadLine();
                 Console.WriteLine("Enter hour...");
-                calendarEvent.hour = Convert.ToInt32(Console.ReadLine());
+                newEvent.hour = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("Enter minute...");
-                calendarEvent.minute = Convert.ToInt32(Console.ReadLine());
+                newEvent.minute = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("Enter day...");
-                calendarEvent.day = Convert.ToInt32(Console.ReadLine());
+                newEvent.day = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("Enter month(number)...");
-                calendarEvent.month = Convert.ToInt32(Console.ReadLine());
+                newEvent.month = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("Enter year...");
-                calendarEvent.year = Convert.ToInt32(Console.ReadLine());
+                newEvent.year = Convert.ToInt32(Console.ReadLine());
+                this.Events.Add(newEvent); 
             }
         }
-        public class calendarEvent
+        public class CalendarEvent
         {
-            public static int year;
-            public static int month;
-            public static int day;
-            public static int hour;
-            public static int minute;
-            public static string eventName;
+            public  int year;
+            public  int month;
+            public  int day;
+            public  int hour;
+            public  int minute;
+            public  string eventName;
+            public DateTime Date;
 
             
         }
 
-        public class employes
+        public class Employes
         {
             string name;
             string phoneNum;
@@ -42,7 +47,7 @@
             string status;
         }
 
-        public class pacients
+        public class Pacients
         {
             string name;
             string phoneNum;
@@ -51,19 +56,20 @@
             string medicalHistory;
         }
 
-        public class msg
+        public class Msg
         {
             string content;
             string recipient;
             string sender;
         }
 
-        class program
+        class Program
         {
             static void Main()
             {
-                calendar.addEvent();
-                Console.WriteLine("You have added the event " + calendarEvent.eventName + " on " + calendarEvent.hour + ":" + calendarEvent.minute + " " + calendarEvent.day + "/" + calendarEvent.month + "/" + calendarEvent.year );
+                var calendar = new Calendar();
+                calendar.AddEvent();
+                Console.WriteLine("You have added the event " + calendar.Events[0].eventName + " on " + calendar.Events[0].hour + ":" +calendar.Events[0].minute + " " + calendar.Events[0].day + "/" + calendar.Events[0].month + "/" +calendar.Events[0].year );
                 
             }
         }
