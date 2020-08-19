@@ -101,6 +101,10 @@ namespace mainSys
                                 Console.WriteLine( calendar.Events[i].EventName);
                                 Console.WriteLine("On " + calendar.Events[i].Date);
                             }
+                            if(calendar.EventCount == 0)
+                            {
+                                Console.WriteLine("There are no events");
+                            }
                             Main2();
                             break;
                         case (10):
