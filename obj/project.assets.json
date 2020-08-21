@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mykol\\Documents\\GitHub\\md-system\\md-system.csproj",
+      "projectUniqueName": "C:\\Users\\mykol\\OneDrive\\Documents\\GitHub\\md-system\\md-system.csproj",
       "projectName": "md-system",
-      "projectPath": "C:\\Users\\mykol\\Documents\\GitHub\\md-system\\md-system.csproj",
+      "projectPath": "C:\\Users\\mykol\\OneDrive\\Documents\\GitHub\\md-system\\md-system.csproj",
       "packagesPath": "C:\\Users\\mykol\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mykol\\Documents\\GitHub\\md-system\\obj\\",
+      "outputPath": "C:\\Users\\mykol\\OneDrive\\Documents\\GitHub\\md-system\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\mykol\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -56,7 +56,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

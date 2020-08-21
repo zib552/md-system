@@ -64,14 +64,62 @@ namespace mainSys
             public string Position; 
             
         }
-
-        public class Pacients
+        public class PatientsList
         {
-            string name;
-            string phoneNum;
-            string eMail;
-            string allergies;
-            string medicalHistory;
+            public IList<PatientsInf> Ptn = new List<PatientsInf>();
+            public int PatientCount;
+
+            public void AddPatient()
+            {
+                var newPtn = new PatientsInf();
+                Console.WriteLine("Enter the patients name");
+                newPtn.Name = Console.ReadLine();
+                Console.WriteLine("Enter the patients phone number");
+                newPtn.PhoneNum = Console.ReadLine();
+                Console.WriteLine("Enter the pacients email");
+                newPtn.EMail = Console.ReadLine();
+                Console.WriteLine("Does the pacient have any special conditions");
+                Console.WriteLine("Y/N");
+                newPtn.SpecialNd = Console.ReadLine();
+                switch (newPtn.SpecialNd)
+                {
+                    case ("Y"):
+                        if(newPtn.SpecialNd != "Y" && newPtn.SpecialNd != "N")
+                        {
+                            newPtn.SpecialNd = Console.ReadLine();
+                            goto default;
+                        }
+                        else if(newPtn.SpecialNd == "N")
+                        {
+                            goto case "N";
+                        }
+                        Console.WriteLine("Enter the info");
+                        newPtn.ImportantInf = Console.ReadLine();
+                        break;
+                    case ("N"):
+                        break;
+                    default:
+                        Console.WriteLine("Invalid character!");
+                        Console.WriteLine("Enter Y or N");
+                        goto case "Y";
+                }
+                Console.WriteLine("Enter the patients medical history");
+                newPtn.MedicalHistory = Console.ReadLine();
+                this.Ptn.Add(newPtn);
+                PatientCount++;
+
+
+            }
+        }
+
+        public class PatientsInf
+        {
+            public string SpecialNd;
+            public string Name;
+            public string PhoneNum;
+            public string EMail;
+            public string ImportantInf;
+            public string MedicalHistory;
         }
 
         public class Msg
@@ -87,6 +135,7 @@ namespace mainSys
             {
                 var calendar = new Calendar();
                 var employeeList = new EmployeeList();
+                var patientList = new PatientsList();
                 Main2();
                 void Main2(){
                     Console.WriteLine("Enter 1 to add a new event");
@@ -95,6 +144,9 @@ namespace mainSys
                     Console.WriteLine("Enter 4 to add a new employee");
                     Console.WriteLine("Enter 5 to remove an employee");
                     Console.WriteLine("Enter 6 to view employee info");
+                    Console.WriteLine("Enter 7 to add a patient");
+                    Console.WriteLine("Enter 8 to remove a patiet");
+                    Console.WriteLine("Enter 9 to view a patients info");
                     Console.WriteLine("Enter 10 to exit program");
                     int selection = Convert.ToInt32(Console.ReadLine());
                     switch (selection)
@@ -183,6 +235,55 @@ namespace mainSys
                             Console.WriteLine("The phone number of " + employeeList.Empl[EmplInfSelection].Name + " is " +  employeeList.Empl[EmplInfSelection].PhoneNum);
                             Console.WriteLine("The email of " + employeeList.Empl[EmplInfSelection].Name + " is " + employeeList.Empl[EmplInfSelection].EMail);
                             Console.WriteLine("The job title of " + employeeList.Empl[EmplInfSelection].Name + " is " +  employeeList.Empl[EmplInfSelection].Position);
+                            Console.WriteLine("");
+                            Main2();
+                            break;
+                        case (7):
+                            patientList.AddPatient();
+                            Console.WriteLine("You have added the patient " + patientList.Ptn[patientList.PatientCount - 1].Name);
+                            Main2();
+                            break;
+                        case (8):
+                            if(patientList.PatientCount == 0)
+                            {
+                                Console.WriteLine("There are no patients");
+                                Console.WriteLine("");
+                                Main2();
+                                break;
+                            }
+                            for( int i = 0; i < patientList.PatientCount; i++)
+                            {
+                                Console.WriteLine(i + ". "+   patientList.Ptn[i].Name);
+                                Console.WriteLine("");
+                            }
+                            Console.WriteLine("Which patient would you like to remove?");
+                            int PtnRmSelection = Convert.ToInt32(Console.ReadLine());
+                            patientList.Ptn.RemoveAt(PtnRmSelection);
+                            patientList.PatientCount--;
+                            Main2();
+                            break;
+                        case (9):
+                             if(patientList.PatientCount == 0)
+                            {
+                                Console.WriteLine("There are no patients");
+                                Console.WriteLine("");
+                                Main2();
+                                break;
+                            }
+                            for( int i = 0; i < patientList.PatientCount; i++)
+                            {
+                                Console.WriteLine(i + ". "+   patientList.Ptn[i].Name);
+                                Console.WriteLine("");
+                            }
+                            Console.WriteLine("Which patients info would you like to see?");
+                            int PtnlInfSelection = Convert.ToInt32(Console.ReadLine());
+                            Console.WriteLine("The phone number of " + patientList.Ptn[PtnlInfSelection].Name + " is " + patientList.Ptn[PtnlInfSelection].PhoneNum);
+                            Console.WriteLine("The email of " + patientList.Ptn[PtnlInfSelection].Name + " is " +  patientList.Ptn[PtnlInfSelection].EMail);
+                            if( patientList.Ptn[PtnlInfSelection].SpecialNd == "Y")
+                            {
+                                Console.WriteLine("The important info of " + patientList.Ptn[PtnlInfSelection].Name + " is " +  patientList.Ptn[PtnlInfSelection].ImportantInf);
+                            }
+                            Console.WriteLine("The medical history of " + patientList.Ptn[PtnlInfSelection].Name + " is " +  patientList.Ptn[PtnlInfSelection].MedicalHistory);
                             Console.WriteLine("");
                             Main2();
                             break;
