@@ -1,0 +1,13 @@
+C:\Users\mykol\Documents\GitHub\md-system\Console\bin\Debug\netcoreapp3.1\Console.exe
+C:\Users\mykol\Documents\GitHub\md-system\Console\bin\Debug\netcoreapp3.1\Console.deps.json
+C:\Users\mykol\Documents\GitHub\md-system\Console\bin\Debug\netcoreapp3.1\Console.runtimeconfig.json
+C:\Users\mykol\Documents\GitHub\md-system\Console\bin\Debug\netcoreapp3.1\Console.runtimeconfig.dev.json
+C:\Users\mykol\Documents\GitHub\md-system\Console\bin\Debug\netcoreapp3.1\Console.dll
+C:\Users\mykol\Documents\GitHub\md-system\Console\bin\Debug\netcoreapp3.1\Console.pdb
+C:\Users\mykol\Documents\GitHub\md-system\Console\obj\Debug\netcoreapp3.1\Console.csprojAssemblyReference.cache
+C:\Users\mykol\Documents\GitHub\md-system\Console\obj\Debug\netcoreapp3.1\Console.AssemblyInfoInputs.cache
+C:\Users\mykol\Documents\GitHub\md-system\Console\obj\Debug\netcoreapp3.1\Console.AssemblyInfo.cs
+C:\Users\mykol\Documents\GitHub\md-system\Console\obj\Debug\netcoreapp3.1\Console.csproj.CoreCompileInputs.cache
+C:\Users\mykol\Documents\GitHub\md-system\Console\obj\Debug\netcoreapp3.1\Console.dll
+C:\Users\mykol\Documents\GitHub\md-system\Console\obj\Debug\netcoreapp3.1\Console.pdb
+C:\Users\mykol\Documents\GitHub\md-system\Console\obj\Debug\netcoreapp3.1\Console.genruntimeconfig.cache
