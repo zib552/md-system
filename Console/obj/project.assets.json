@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mykol\\Documents\\GitHub\\md-system\\md-system.csproj",
-      "projectName": "md-system",
-      "projectPath": "C:\\Users\\mykol\\Documents\\GitHub\\md-system\\md-system.csproj",
+      "projectUniqueName": "C:\\Users\\mykol\\Documents\\GitHub\\md-system\\Console\\Console.csproj",
+      "projectName": "Console",
+      "projectPath": "C:\\Users\\mykol\\Documents\\GitHub\\md-system\\Console\\Console.csproj",
       "packagesPath": "C:\\Users\\mykol\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mykol\\Documents\\GitHub\\md-system\\obj\\",
+      "outputPath": "C:\\Users\\mykol\\Documents\\GitHub\\md-system\\Console\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\mykol\\AppData\\Roaming\\NuGet\\NuGet.Config"

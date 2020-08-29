@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "Q6GjXdHXY+p4ICs2gwoYi58WYZLOUQyO4bPrcmQYof/kjX6oklddByJTEcztwqvfBhwomNy0p2Jke1wLIJP7Nw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\mykol\\Documents\\GitHub\\md-system\\Tests\\Tests.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mykol\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\mykol\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
