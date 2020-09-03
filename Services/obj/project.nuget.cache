@@ -1,11 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gEjWaymuypY4wN42jkxVWbyDyvCqpJN9xTmvkLyRaoaXYmhzXQLS5ASBbgc4IY1GvltRWR/2abKoruIepD0lLw==",
+  "dgSpecHash": "fjSaCQnIMxhE/QJFSxtWnHI17jqzc5Bzyt0+qMsYdN6A9k45W5gUKU/uk4LvXq6BnvUAmUtLjDaKr6fbl1iJCg==",
   "success": true,
   "projectFilePath": "C:\\Users\\mykol\\Documents\\GitHub\\md-system\\Services\\Services.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\mykol\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\mykol\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }

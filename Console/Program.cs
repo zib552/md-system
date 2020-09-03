@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Services;
 
 namespace mainSys
     {
@@ -10,10 +11,10 @@ namespace mainSys
             public IList<CalendarEvent> Events = new List<CalendarEvent>();
             public void AddEvent()
             {
-                var newEvent = new CalendarEvent();
+                //var newEvent = new CalendarEvent();
                 
                 Console.WriteLine("Enter event name...");
-                newEvent.EventName =  Console.ReadLine();
+                var newEventName =  Console.ReadLine();
                 Console.WriteLine("Enter year...");
                 int Year = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("Enter month(number)...");
@@ -24,9 +25,11 @@ namespace mainSys
                 int Hour = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("Enter minute...");
                 int Minute = Convert.ToInt32(Console.ReadLine());
-                int Second = 00;
-                newEvent.Date = new DateTime(Year, Month, Day, Hour,  Minute, Second);
-                this.Events.Add(newEvent);
+                var eventService = new EventService();
+                eventService.AddEventService();
+                //newEvent.Date = new DateTime(Year, Month, Day, Hour,  Minute, Second);
+                
+                //this.Events.Add(newEvent);
                 EventCount ++;
             }
         }
