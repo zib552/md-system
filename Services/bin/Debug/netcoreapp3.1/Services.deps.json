@@ -6,15 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "md-system/1.0.0": {
+      "Services/1.0.0": {
         "runtime": {
-          "md-system.dll": {}
+          "Services.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "md-system/1.0.0": {
+    "Services/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

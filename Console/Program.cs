@@ -4,15 +4,12 @@ using Services;
 
 namespace mainSys
     {
-        public class Calendar
+        /* public class Calendar
         {
             
             public int EventCount;
-            public IList<CalendarEvent> Events = new List<CalendarEvent>();
             public void AddEvent()
-            {
-                //var newEvent = new CalendarEvent();
-                
+            {         
                 Console.WriteLine("Enter event name...");
                 var newEventName =  Console.ReadLine();
                 Console.WriteLine("Enter year...");
@@ -26,20 +23,10 @@ namespace mainSys
                 Console.WriteLine("Enter minute...");
                 int Minute = Convert.ToInt32(Console.ReadLine());
                 var eventService = new EventService();
-                eventService.AddEventService();
-                //newEvent.Date = new DateTime(Year, Month, Day, Hour,  Minute, Second);
-                
-                //this.Events.Add(newEvent);
+                eventService.AddEventService(newEventName, Year, Month, Day, Hour,  Minute);
                 EventCount ++;
             }
-        }
-        public class CalendarEvent
-        {
-            public  string EventName;
-            public DateTime Date;
-
-            
-        }
+        } */
         public class EmployeeList
         {
             public int  EmployeeCount;
@@ -136,9 +123,10 @@ namespace mainSys
         {
             static void Main()
             {
-                var calendar = new Calendar();
+                //var calendar = new Calendar();
                 var employeeList = new EmployeeList();
                 var patientList = new PatientsList();
+                var eventService = new EventService();
                 Main2();
                 void Main2(){
                     Console.WriteLine("Enter 1 to add a new event");
@@ -155,11 +143,28 @@ namespace mainSys
                     switch (selection)
                     {
                         case (1):
-                            calendar.AddEvent();
-                            Console.WriteLine("You have added the event " + calendar.Events[calendar.EventCount - 1].EventName + " on " + calendar.Events[calendar.EventCount - 1].Date);
+                            while(true)
+                            {
+                                Console.WriteLine("Please enter event date and time in the following format 2020-09-06 12:35");
+                                var input = Console.ReadLine();
+                                try
+                                {
+                                    var date = DateTime.ParseExact(input, "yyyy-MM-dd HH:mm", null);
+                                    eventService.AddEventService("be", date); 
+                                    Console.WriteLine("Thank you");
+                                    break;
+                                    //Console.WriteLine("You have added the event " + calendar.Events[calendar.EventCount - 1].EventName + " on " + calendar.Events[calendar.EventCount - 1].Date);
+                                }
+                                catch(FormatException e)
+                                {
+                                    Console.WriteLine("Wrong format!");
+                                }
+                            }
+                            //calendar.AddEvent();
+                            
                             Main2();
                             break;
-                        case (2):
+                        /* case (2):
                             if(calendar.EventCount == 0)
                             {
                                 Console.WriteLine("There are no events");
@@ -195,7 +200,7 @@ namespace mainSys
                                 break;
                             }
                             Main2();
-                            break;
+                            break; */
                         case (4):
                             employeeList.AddEmployee();
                             Console.WriteLine("You have added the employee " + employeeList.Empl[employeeList.EmployeeCount - 1].Name + " whose position is " + employeeList.Empl[employeeList.EmployeeCount - 1].Position);

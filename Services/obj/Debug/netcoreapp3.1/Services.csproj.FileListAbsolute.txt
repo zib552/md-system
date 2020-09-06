@@ -1,0 +1,9 @@
+C:\Users\mykol\Documents\GitHub\md-system\Services\bin\Debug\netcoreapp3.1\Services.deps.json
+C:\Users\mykol\Documents\GitHub\md-system\Services\bin\Debug\netcoreapp3.1\Services.dll
+C:\Users\mykol\Documents\GitHub\md-system\Services\bin\Debug\netcoreapp3.1\Services.pdb
+C:\Users\mykol\Documents\GitHub\md-system\Services\obj\Debug\netcoreapp3.1\Services.csprojAssemblyReference.cache
+C:\Users\mykol\Documents\GitHub\md-system\Services\obj\Debug\netcoreapp3.1\Services.AssemblyInfoInputs.cache
+C:\Users\mykol\Documents\GitHub\md-system\Services\obj\Debug\netcoreapp3.1\Services.AssemblyInfo.cs
+C:\Users\mykol\Documents\GitHub\md-system\Services\obj\Debug\netcoreapp3.1\Services.csproj.CoreCompileInputs.cache
+C:\Users\mykol\Documents\GitHub\md-system\Services\obj\Debug\netcoreapp3.1\Services.dll
+C:\Users\mykol\Documents\GitHub\md-system\Services\obj\Debug\netcoreapp3.1\Services.pdb

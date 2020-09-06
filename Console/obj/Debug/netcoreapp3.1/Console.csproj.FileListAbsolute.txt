@@ -11,3 +11,6 @@ C:\Users\mykol\Documents\GitHub\md-system\Console\obj\Debug\netcoreapp3.1\Consol
 C:\Users\mykol\Documents\GitHub\md-system\Console\obj\Debug\netcoreapp3.1\Console.dll
 C:\Users\mykol\Documents\GitHub\md-system\Console\obj\Debug\netcoreapp3.1\Console.pdb
 C:\Users\mykol\Documents\GitHub\md-system\Console\obj\Debug\netcoreapp3.1\Console.genruntimeconfig.cache
+C:\Users\mykol\Documents\GitHub\md-system\Console\bin\Debug\netcoreapp3.1\Services.dll
+C:\Users\mykol\Documents\GitHub\md-system\Console\bin\Debug\netcoreapp3.1\Services.pdb
+C:\Users\mykol\Documents\GitHub\md-system\Console\obj\Debug\netcoreapp3.1\Console.csproj.CopyComplete
