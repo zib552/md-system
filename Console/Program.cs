@@ -17,7 +17,7 @@ namespace mainSys
         {
             static void Main()
             {
-                //var calendar = new Calendar();
+                var fileService = new FileService();
                 var employeeList = new EmployeeList();
                 var patientList = new PatientsList();
                 var eventService = new EventService();
@@ -48,6 +48,8 @@ namespace mainSys
                                     var newEventName = Console.ReadLine();
                                     eventService.AddEventServiceDate(newEventName, date); 
                                     Console.WriteLine("Thank you");
+                                    var events1 = eventService.SerializeEvents();
+                                    Console.WriteLine(events1);
                                     break;
                                 }
                                 catch(FormatException e)
@@ -59,14 +61,14 @@ namespace mainSys
                             break;
 
                         case (2):
-                            if(eventService.eventCount == 0)
+                            if(eventService.Events.Count == 0)
                             {
                                 Console.WriteLine("There are no events");
                                 Console.WriteLine("");
                                 Main2();
                                 break;
                             }
-                            for( int i = 0; i < eventService.eventCount; i++)
+                            for( int i = 0; i < eventService.Events.Count; i++)
                             {
                                 Console.WriteLine(i + ". "+  eventService.Events[i].EventName);
                                 Console.WriteLine("On " + eventService.Events[i].Date);
@@ -75,18 +77,17 @@ namespace mainSys
                             Console.WriteLine("Which event would you like to remove?");
                             int EvntRmSelection = Convert.ToInt32(Console.ReadLine());
                             eventService.Events.RemoveAt(EvntRmSelection);
-                            eventService.eventCount--;
-                            Console.WriteLine(eventService.eventCount);
+                            Console.WriteLine(eventService.Events.Count);
                             Main2();
                             break;
                         case (3):
-                            for( int i = 0; i < eventService.eventCount; i++)
+                            for( int i = 0; i < eventService.Events.Count; i++)
                             {
                                 Console.WriteLine( eventService.Events[i].EventName);
                                 Console.WriteLine("On " + eventService.Events[i].Date);
                                 Console.WriteLine("");
                             }
-                            if(eventService.eventCount == 0)
+                            if(eventService.Events.Count == 0)
                             {
                                 Console.WriteLine("There are no events");
                                 Console.WriteLine("");

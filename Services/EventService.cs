@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace Services
 {
@@ -7,7 +9,6 @@ namespace Services
     {
         public IList<CalendarEvent> Events = new List<CalendarEvent>();
 
-        public int eventCount;
         
         public  DateTime AddEvent()
         {
@@ -19,16 +20,28 @@ namespace Services
             newEvent.EventName = newEventName;
             newEvent.Date = date;
             this.Events.Add(newEvent);
-            eventCount++;
             return newEvent;
         }
 
+        
+        public string SerializeEvents()
+        {
+            var options = new JsonSerializerOptions
+            {
+                WriteIndented = true,
+            };
+            var serializedEvents = JsonSerializer.Serialize(this.Events, options);
+            return serializedEvents;
+
+        }
+// ISAVINTI VISKA I FILE
+// ANT STARTUP PERSKAITYTU FAILA
 
     }
 
      public class CalendarEvent
     {
-        public  string EventName;
-        public DateTime Date;         
+        public string EventName {get; set;}  
+        public DateTime Date {get; set;}      
     }
 }
