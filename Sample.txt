@@ -1,4 +1,6 @@
-hello world
-AAaaaAA
-BB
-CCCcc
+[
+  {
+    "EventName": "Arnas",
+    "Date": "2003-08-19T12:30:00"
+  }
+]

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using System.IO;
+
 
 namespace Services
 {
@@ -34,6 +36,13 @@ namespace Services
             return serializedEvents;
 
         }
+
+        public object DeserializeEvents(CalendarEvent events)
+        {
+            //object content = File.ReadAllText("Sample.txt");
+            var DeserializedEvents = JsonSerializer.Deserialize(events, typeof(CalendarEvent));
+            return DeserializedEvents;
+        }
 // ISAVINTI VISKA I FILE
 // ANT STARTUP PERSKAITYTU FAILA
 
@@ -44,4 +53,6 @@ namespace Services
         public string EventName {get; set;}  
         public DateTime Date {get; set;}      
     }
+
+    
 }

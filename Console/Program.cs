@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using Services;
 using Employees;
 using Patients;
+using System.Text.Json;
+using System.IO;
 
 namespace mainSys
     {
@@ -32,7 +34,8 @@ namespace mainSys
                     Console.WriteLine("Enter 7 to add a patient");
                     Console.WriteLine("Enter 8 to remove a patiet");
                     Console.WriteLine("Enter 9 to view a patients info");
-                    Console.WriteLine("Enter 10 to exit program");
+                    Console.WriteLine("Enter 10 to save all added information");
+                    Console.WriteLine("Enter 11 to exit program");
                     int selection = Convert.ToInt32(Console.ReadLine());
                     switch (selection)
                     {
@@ -48,8 +51,6 @@ namespace mainSys
                                     var newEventName = Console.ReadLine();
                                     eventService.AddEventServiceDate(newEventName, date); 
                                     Console.WriteLine("Thank you");
-                                    var events1 = eventService.SerializeEvents();
-                                    Console.WriteLine(events1);
                                     break;
                                 }
                                 catch(FormatException e)
@@ -255,6 +256,27 @@ namespace mainSys
                             Main2();
                             break;
                         case (10):
+                            string serializedEvents = eventService.SerializeEvents();
+                            Console.WriteLine(serializedEvents);
+                            try
+                            {
+                                StreamWriter sw = new StreamWriter("Sample.txt");
+                                sw.WriteLine(serializedEvents);
+                                sw.Close();
+                            }
+                            catch(Exception e)
+                            {
+                                Console.WriteLine("Exception: " + e.Message);
+                            }
+                            finally
+                            {
+                                Console.WriteLine("Executing finally block.");
+                            }
+                            break;
+                        case (11):
+                            
+                            break;
+                        case (12):
 
                             break;   
                         default:
