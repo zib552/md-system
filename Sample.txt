@@ -1,6 +1,6 @@
 [
   {
-    "EventName": "Arnas",
+    "EventName": "Gimtadienis",
     "Date": "2003-08-19T12:30:00"
   }
 ]

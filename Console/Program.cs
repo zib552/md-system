@@ -277,7 +277,7 @@ namespace mainSys
                             
                             break;
                         case (12):
-
+                            eventService.DeserializeEvents();
                             break;   
                         default:
                             Console.WriteLine("None selected");
