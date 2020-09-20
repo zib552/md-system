@@ -37,19 +37,14 @@ namespace Services
 
         }
 
-        public void DeserializeEvents()
+        public List<CalendarEvent> DeserializeEvents()
         {
             string content = File.ReadAllText("Sample.txt");
-            Console.WriteLine(content);
-            CalendarEvent DeserializedEvents = JsonSerializer.DeserializeObject<CalendarEvent>(content);
-            Console.WriteLine(DeserializedEvents);
-            //return DeserializedEvents;
+            var deserializedEvents = JsonSerializer.Deserialize<List<CalendarEvent>>(content);
+            return deserializedEvents;
         }
-// ISAVINTI VISKA I FILE
-// ANT STARTUP PERSKAITYTU FAILA
 
     }
-
      public class CalendarEvent
     {
         public string EventName {get; set;}  

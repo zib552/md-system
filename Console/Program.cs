@@ -23,6 +23,7 @@ namespace mainSys
                 var employeeList = new EmployeeList();
                 var patientList = new PatientsList();
                 var eventService = new EventService();
+                eventService.Events = eventService.DeserializeEvents();
                 Main2();
                 void Main2(){
                     Console.WriteLine("Enter 1 to add a new event");
@@ -36,6 +37,7 @@ namespace mainSys
                     Console.WriteLine("Enter 9 to view a patients info");
                     Console.WriteLine("Enter 10 to save all added information");
                     Console.WriteLine("Enter 11 to exit program");
+                    Console.WriteLine("Enter 12 to exit program");
                     int selection = Convert.ToInt32(Console.ReadLine());
                     switch (selection)
                     {
@@ -72,7 +74,6 @@ namespace mainSys
                             for( int i = 0; i < eventService.Events.Count; i++)
                             {
                                 Console.WriteLine(i + ". "+  eventService.Events[i].EventName);
-                                Console.WriteLine("On " + eventService.Events[i].Date);
                                 Console.WriteLine("");
                             }
                             Console.WriteLine("Which event would you like to remove?");
@@ -274,10 +275,9 @@ namespace mainSys
                             }
                             break;
                         case (11):
-                            
+                            eventService.DeserializeEvents();                            
                             break;
                         case (12):
-                            eventService.DeserializeEvents();
                             break;   
                         default:
                             Console.WriteLine("None selected");
