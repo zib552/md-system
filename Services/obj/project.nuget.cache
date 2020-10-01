@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "cQniTWA1TPE2DZ0xBCnQWjLpoTjXlLFaecHO33EVDiJhwn0nD5Q5e3uGXYrvmQP2v9/LfcUhl/ku3I3s1agPzA==",
+  "dgSpecHash": "GHe8NNhpGj7Y0AYodMQZctxlXCqcSWZUkHWj8lXRyi6Yhc8d44D7PL72bvcops2vKvlrwmRYPWywr5Rsqixnew==",
   "success": true,
   "projectFilePath": "C:\\Users\\mykol\\Documents\\GitHub\\md-system\\Services\\Services.csproj",
   "expectedPackageFiles": [
@@ -32,6 +32,7 @@
     "C:\\Users\\mykol\\.nuget\\packages\\sqlitepclraw.provider.dynamic_cdecl\\2.0.2\\sqlitepclraw.provider.dynamic_cdecl.2.0.2.nupkg.sha512",
     "C:\\Users\\mykol\\.nuget\\packages\\system.collections.immutable\\1.7.1\\system.collections.immutable.1.7.1.nupkg.sha512",
     "C:\\Users\\mykol\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512",
+    "C:\\Users\\mykol\\.nuget\\packages\\system.data.sqlite.core\\1.0.113.1\\system.data.sqlite.core.1.0.113.1.nupkg.sha512",
     "C:\\Users\\mykol\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512",
     "C:\\Users\\mykol\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
     "C:\\Users\\mykol\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512"

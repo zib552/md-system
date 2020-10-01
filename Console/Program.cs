@@ -278,6 +278,7 @@ namespace mainSys
                             eventService.DeserializeEvents();                            
                             break;
                         case (12):
+                            eventService.DataBase();
                             break;   
                         default:
                             Console.WriteLine("None selected");
