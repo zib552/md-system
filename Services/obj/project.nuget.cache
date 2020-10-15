@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GHe8NNhpGj7Y0AYodMQZctxlXCqcSWZUkHWj8lXRyi6Yhc8d44D7PL72bvcops2vKvlrwmRYPWywr5Rsqixnew==",
+  "dgSpecHash": "p9jN9he9It/IUrz3TsF75VtmN/mVEYL0Q7i7+Jit2cYFKEv1GBySA4xmgz1mmRO04nhLq6B+J0auFOibPqpoqQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mykol\\Documents\\GitHub\\md-system\\Services\\Services.csproj",
+  "projectFilePath": "C:\\Users\\mykol\\documents\\GitHub\\MD-SYSTEM\\Services\\Services.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mykol\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\mykol\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",

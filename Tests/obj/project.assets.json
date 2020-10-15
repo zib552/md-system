@@ -5778,11 +5778,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mykol\\Documents\\GitHub\\md-system\\Tests\\Tests.csproj",
+      "projectUniqueName": "C:\\Users\\mykol\\documents\\GitHub\\MD-SYSTEM\\Tests\\Tests.csproj",
       "projectName": "Tests",
-      "projectPath": "C:\\Users\\mykol\\Documents\\GitHub\\md-system\\Tests\\Tests.csproj",
+      "projectPath": "C:\\Users\\mykol\\documents\\GitHub\\MD-SYSTEM\\Tests\\Tests.csproj",
       "packagesPath": "C:\\Users\\mykol\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mykol\\Documents\\GitHub\\md-system\\Tests\\obj\\",
+      "outputPath": "C:\\Users\\mykol\\documents\\GitHub\\MD-SYSTEM\\Tests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\mykol\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -5796,8 +5796,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\mykol\\Documents\\GitHub\\md-system\\Services\\Services.csproj": {
-              "projectPath": "C:\\Users\\mykol\\Documents\\GitHub\\md-system\\Services\\Services.csproj"
+            "C:\\Users\\mykol\\documents\\GitHub\\MD-SYSTEM\\Services\\Services.csproj": {
+              "projectPath": "C:\\Users\\mykol\\documents\\GitHub\\MD-SYSTEM\\Services\\Services.csproj"
             }
           }
         }

@@ -36,7 +36,7 @@ namespace mainSys
                     Console.WriteLine("Enter 8 to remove a patiet");
                     Console.WriteLine("Enter 9 to view a patients info");
                     Console.WriteLine("Enter 10 to save all added information");
-                    Console.WriteLine("Enter 11 to exit program");
+                    Console.WriteLine("Enter 11 to save data");
                     Console.WriteLine("Enter 12 to exit program");
                     int selection = Convert.ToInt32(Console.ReadLine());
                     switch (selection)
@@ -274,11 +274,11 @@ namespace mainSys
                                 Console.WriteLine("Executing finally block.");
                             }
                             break;
+                        //case (11):
+                          // eventService.DeserializeEvents();                            
+                            //break;
                         case (11):
-                            eventService.DeserializeEvents();                            
-                            break;
-                        case (12):
-                            eventService.DataBase();
+                            eventService.DataBase(eventService.Events);
                             break;   
                         default:
                             Console.WriteLine("None selected");
