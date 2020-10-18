@@ -40,7 +40,7 @@ namespace Services
 
         public List<CalendarEvent> DeserializeEvents()
         {
-            string content = File.ReadAllText("Sample.txt");
+            string content = File.ReadAllText("../Sample.txt");
             var deserializedEvents = JsonSerializer.Deserialize<List<CalendarEvent>>(content);
             return deserializedEvents;
         }
@@ -75,12 +75,18 @@ namespace Services
                             //cmd1.ExecuteNonQuery();
                         
                             Console.WriteLine(count1);
-                            for(var i = count1; i < Events.Count; i++){
+                            for(var i = 0; i < Events.Count; i++){
 
-                            var name = Events[i].EventName;
-                            var date = Events[i].Date.ToString();
-                            cmd1.CommandText = $"INSERT INTO events(name, date) VALUES('{name}','{date}')";
-                            cmd1.ExecuteNonQuery();
+                                var name = Events[i].EventName;
+                                var date = Events[i].Date.ToString();
+                                cmd1.CommandText =$"SELECT COUNT(*) FROM events WHERE name = '{name}' AND date = '{date}'";
+                                var ex = cmd1.ExecuteScalar();
+                                var ex1 = Convert.ToInt32(ex);
+                                if (ex1 == 0)
+                                {
+                                    cmd1.CommandText = $"INSERT INTO events(name, date) VALUES('{name}','{date}')";
+                                    cmd1.ExecuteNonQuery();
+                                }
                             }
                             break;
                         }
@@ -97,7 +103,7 @@ namespace Services
 
                                 using var cmd1 = new SQLiteCommand(con);
 
-                                cmd1.CommandText = "UPDATE events SET TEST60 = name TEST70";
+                                cmd1.CommandText = "UPDATE events SET name = 'TEST301' WHERE name = 'TEST 30'";
                                 cmd1.ExecuteNonQuery();
 
                                 
