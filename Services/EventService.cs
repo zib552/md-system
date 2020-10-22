@@ -4,6 +4,7 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Data.SQLite;
 using System.IO;
+using Microsoft.EntityFrameworkCore;
 
 
 namespace Services
@@ -64,6 +65,9 @@ namespace Services
 
                             using var cmd1 = new SQLiteCommand(con);
 
+                            //cmd1.CommandText = @"CREATE TABLE events(id INTEGER PRIMARY KEY, name TEXT, date DATE, RId INTEGER)";
+                            //cmd1.ExecuteNonQuery();
+
                             cmd1.CommandText = "SELECT COUNT(name) FROM events";
                             var count = cmd1.ExecuteScalar();
                             var count1 = Convert.ToInt32(count);
@@ -71,20 +75,18 @@ namespace Services
                             //cmd1.CommandText = "DROP TABLE IF EXISTS events";
                             //cmd1.ExecuteNonQuery();
 
-                            //cmd1.CommandText = @"CREATE TABLE events(id INTEGER PRIMARY KEY, name TEXT, date DATE)";
-                            //cmd1.ExecuteNonQuery();
-                        
-                            Console.WriteLine(count1);
+                            
                             for(var i = 0; i < Events.Count; i++){
 
                                 var name = Events[i].EventName;
                                 var date = Events[i].Date.ToString();
-                                cmd1.CommandText =$"SELECT COUNT(*) FROM events WHERE name = '{name}' AND date = '{date}'";
+                                var id = count1 + i;
+                                cmd1.CommandText =$"SELECT COUNT(*) FROM events WHERE name = '{name}' AND date = '{date}' AND RId = {id}";
                                 var ex = cmd1.ExecuteScalar();
                                 var ex1 = Convert.ToInt32(ex);
                                 if (ex1 == 0)
                                 {
-                                    cmd1.CommandText = $"INSERT INTO events(name, date) VALUES('{name}','{date}')";
+                                    cmd1.CommandText = $"INSERT INTO events(name, date, RId) VALUES('{name}','{date}',{id})";
                                     cmd1.ExecuteNonQuery();
                                 }
                             }
@@ -103,8 +105,19 @@ namespace Services
 
                                 using var cmd1 = new SQLiteCommand(con);
 
-                                cmd1.CommandText = "UPDATE events SET name = 'TEST301' WHERE name = 'TEST 30'";
-                                cmd1.ExecuteNonQuery();
+                                cmd1.CommandText = "SELECT COUNT(name) FROM events";
+                                var count = cmd1.ExecuteScalar();
+                                var count1 = Convert.ToInt32(count);
+
+                                for(var i = 0; i < count1; i++)
+                                {
+                                    var id = i;
+                                    cmd1.CommandText = $"SELECT name FROM events WHERE RId = '{id}'";
+                                    var list = cmd.ExecuteScalar().ToString();
+                                    Console.WriteLine(list);
+                                }
+                                //cmd1.CommandText = "UPDATE events SET name = 'TEST301' WHERE name = 'TEST 30'";
+                                //cmd1.ExecuteNonQuery();
 
                                 
                                 break;
